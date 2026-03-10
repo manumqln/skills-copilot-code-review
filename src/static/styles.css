@@ -672,3 +672,286 @@ footer {
   padding: 15px;
   font-weight: bold;
 }
+
+/* Announcement Container */
+#announcement-container {
+  margin: 0;
+  padding: 0;
+}
+
+/* Manage Announcements Button */
+#manage-announcements-button {
+  padding: 5px 12px;
+    margin: 0 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+  }
+
+  #manage-announcements-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Announcements Modal */
+  .announcements-modal-content {
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .close-announcements-modal {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+  }
+
+  .close-announcements-modal:hover,
+  .close-announcements-modal:focus {
+    color: #000;
+  }
+
+  /* Announcements Section */
+  .announcements-section {
+    margin-top: 20px;
+  }
+
+  #add-announcement-button {
+    margin-bottom: 20px;
+  }
+
+  .primary-button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .primary-button:hover {
+    background-color: var(--primary-light);
+  }
+
+  .secondary-button {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+  }
+
+  .secondary-button:hover {
+    background-color: #5a6268;
+  }
+
+  /* Announcements List */
+  #announcements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .empty-state {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 40px;
+    font-style: italic;
+  }
+
+  .announcement-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--surface);
+    transition: box-shadow 0.3s;
+  }
+
+  .announcement-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .announcement-content {
+    flex: 1;
+    margin-right: 15px;
+  }
+
+  .announcement-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .status-badge {
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .status-badge.active {
+    background-color: var(--success-light);
+    color: var(--success);
+  }
+
+  .status-badge.inactive {
+    background-color: var(--border-light);
+    color: var(--text-secondary);
+  }
+
+  .announcement-dates {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  .announcement-message {
+    margin: 8px 0;
+    color: var(--text-primary);
+    line-height: 1.5;
+  }
+
+  .announcement-meta {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  .announcement-actions {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    min-width: 80px;
+  }
+
+  .edit-announcement-btn,
+  .delete-announcement-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.3s;
+  }
+
+  .edit-announcement-btn {
+    background-color: var(--secondary);
+    color: white;
+  }
+
+  .edit-announcement-btn:hover {
+    background-color: var(--secondary-dark);
+  }
+
+  .delete-announcement-btn {
+    background-color: var(--error);
+    color: white;
+  }
+
+  .delete-announcement-btn:hover {
+    background-color: #a71c1c;
+  }
+
+  /* Announcement Form */
+  #announcement-form-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--background);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+
+  #announcement-form-container h4 {
+    margin-bottom: 15px;
+    color: var(--primary);
+  }
+
+  #announcement-form .form-group {
+    margin-bottom: 15px;
+  }
+
+  #announcement-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-primary);
+  }
+
+  #announcement-form input[type="date"],
+  #announcement-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: inherit;
+  }
+
+  #announcement-form textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  #announcement-form input:focus,
+  #announcement-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.1);
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  /* Responsive Design for Announcements */
+  @media (max-width: 768px) {
+    .announcements-modal-content {
+      width: 95%;
+      padding: 15px;
+    }
+
+    .announcement-item {
+      flex-direction: column;
+    }
+
+    .announcement-content {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    .announcement-actions {
+      flex-direction: row;
+      width: 100%;
+    }
+
+    .edit-announcement-btn,
+    .delete-announcement-btn {
+      flex: 1;
+    }
+
+    #manage-announcements-button {
+      font-size: 1.2rem;
+      padding: 5px 10px;
+    }
+  }
